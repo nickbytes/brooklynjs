@@ -1,6 +1,8 @@
 import React from "react";
 import Quote from "../components/Quote";
 import Scene from "../components/Scene";
+import Text from "../components/Text";
+import Big from "../components/Big";
 
 const Wut = () => (
   <div>
@@ -11,15 +13,21 @@ const Wut = () => (
       </Quote>
 
       <Quote>react to input meaningfully</Quote>
-
-      <ol>
-        <li>World Representation</li>
-        <li>Parser</li>
-      </ol>
     </Scene>
 
     <Scene isVisible>
-      <h1>hmmm</h1>
+      <ol>
+        <li>
+          <Big>World Representation</Big>
+        </li>
+        <li>
+          <Big>Parser</Big>
+        </li>
+      </ol>
+    </Scene>
+
+    <Scene isVisible nextPage="sandwich-alignment" hideNav>
+      <Text>:thinking_intensifies:</Text>
     </Scene>
   </div>
 );

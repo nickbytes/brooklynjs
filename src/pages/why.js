@@ -1,31 +1,28 @@
 import React from "react";
 import Scene from "../components/Scene";
+import Glow from "../components/Glow";
+import Big from "../components/Big";
 
 const Why = () => (
   <div>
     <Scene isVisible>
       <ol>
-        <li>World</li>
-        <li>Parser</li>
+        <li>
+          <Big>World Representation</Big>
+        </li>
+        <li>
+          <Big>Parser</Big>
+        </li>
       </ol>
     </Scene>
-    <Scene isVisible>
+    <Scene isVisible nextPage="love-song" hideNav>
       <ol>
-        <li>World === State + Actions</li>
-        <li>Parser === web browsers' ability to process forms</li>
-      </ol>
-    </Scene>
-    <Scene isVisible>
-      <ol>
-        <li>World === State + Actions</li>
-
-        <ul>
-          <li>Explore state management libs</li>
-        </ul>
-        <li>Parser === web browsers' ability to process forms</li>
-        <ul>
-          <li>Your chance to get creative</li>
-        </ul>
+        <li>
+          <Big>World Representation === State + Actions</Big>
+        </li>
+        <li>
+          <Big>Parser === web browser's ability to process forms</Big>
+        </li>
       </ol>
     </Scene>
   </div>

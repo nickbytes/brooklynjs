@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const P = styled.p`
-  font-size: 26px;
+  font-size: 28px;
   line-height: 31px;
-  margin-bottom: 58px;
+  margin-bottom: ${props => (props.mbNone ? "10px" : "58px")};
   font-weight: 400;
 `;
 

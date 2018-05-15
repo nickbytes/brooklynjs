@@ -1,21 +1,22 @@
 import React from "react";
 import Scene from "../components/Scene";
 import Big from "../components/Big";
-import Voice from "../components/Voice";
-import Text from "../components/Text";
+import Img from "../components/Img";
+import sandwich_blank from "../images/sandwich_blank.png";
+import sandwich_sandwich from "../images/sandwich_sandwich.png";
 
 const Sandwich = () => (
   <div>
     <Scene isVisible>
-      <Voice>Is that really a game?</Voice>
+      <Img src={sandwich_blank} alt="Are these sandwiches?" />
     </Scene>
 
-    <Scene>
-      <Text>This is infuriating.</Text>
+    <Scene isVisible>
+      <Img src={sandwich_sandwich} alt="These are all sandwiches" />
     </Scene>
 
-    <Scene>
-      <Big>Here are some things that I consider 'games':</Big>
+    <Scene isVisible nextPage="examples" hideNav>
+      <Big>Is this a game?</Big>
     </Scene>
   </div>
 );
