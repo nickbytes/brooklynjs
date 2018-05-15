@@ -2,7 +2,6 @@ import React from "react";
 import Scene from "../components/Scene";
 import Big from "../components/Big";
 import Text from "../components/Text";
-import Huge from "../components/Huge";
 import Img from "../components/Img";
 import lol from "../images/lol.gif";
 

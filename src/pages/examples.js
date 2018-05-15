@@ -1,6 +1,5 @@
 import React from "react";
 import Scene from "../components/Scene";
-import Big from "../components/Big";
 import Text from "../components/Text";
 
 const Examples = () => (
