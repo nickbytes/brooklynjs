@@ -1,24 +1,32 @@
 # Building Worlds in Javascript
 
-How I built a text adventure game in Javascript
+## How I built a text adventure game in Javascript
 
-## This talk was given at BrooklynJS on May 17, 2018. You can see the "slides" here: brooklynjs.nickbytes.com
+This talk was given at BrooklynJS on May 17, 2018. You can see the "slides" here: brooklynjs.nickbytes.com
 
 The "slides" (and this repo) serve as an example for how you can build a text adventure game in React. If you have any questions, feel free to create an issue!
 
 ## Getting Started
 
-Clone the repository
+1.  Clone the repository:
 
-`git clone`
+```bash
+git clone git@github.com:nickbytes/brooklynjs.git
+```
 
-Install the dependencies.
+2.  Install the dependencies:
 
-`npm install` or `yarn install`
+```bash
+npm install
+yarn install
+```
 
-Start development.
+3.  Start development:
 
-`npm start` or `yarn start`
+```bash
+npm start
+yarn start
+```
 
 ## How is it built?
 
