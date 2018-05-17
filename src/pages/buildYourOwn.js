@@ -10,7 +10,6 @@ import lol from "../images/lol.gif";
 import Clip from "../components/Clip";
 
 import state_pic from "../images/state.png";
-import burning_updater from "../images/burning_updater.png";
 import player_name from "../images/player_name.png";
 import github from "../images/github.png";
 

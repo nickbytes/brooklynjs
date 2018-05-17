@@ -55,6 +55,9 @@ const initialState = {
     c5: false,
     c6: false,
     c7: false
+  },
+  scene8: {
+    c1: true
   }
 };
 
