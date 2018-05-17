@@ -6,6 +6,7 @@ const Blockquote = styled.blockquote`
   line-height: 42px;
   margin-bottom: 60px;
   font-weight: 400;
+  background-color: #87cc74;
 `;
 
 const Quote = ({ children }) => <Blockquote>{children}</Blockquote>;

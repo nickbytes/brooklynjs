@@ -2,7 +2,7 @@ const ns = (scene, clip) => state => {
   const oldSceneState = state[scene];
   const allFalse = [];
 
-  Object.keys(oldSceneState).map((key, index) => {
+  Object.keys(oldSceneState).map(key => {
     allFalse[key] = false;
     return allFalse;
   });

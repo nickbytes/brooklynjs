@@ -12,3 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Source Code Pro", monospace;
 }
+
+a {
+  color: inherit;
+}

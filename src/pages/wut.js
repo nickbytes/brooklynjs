@@ -3,76 +3,102 @@ import { connect } from "refunk";
 import ns from "../updaters/ns";
 
 import Quote from "../components/Quote";
-import Scene from "../components/Scene";
 import Text from "../components/Text";
 import Big from "../components/Big";
 import Img from "../components/Img";
 
 import thinking from "../images/thinking.png";
 import zork from "../images/zork.gif";
+import Clip from "../components/Clip";
+import Scene from "../components/Scene";
+import { ListItem } from "../components/Lists/ListItem";
 
 const Wut = props => {
-  const scene = props.scene1;
+  const scene = props.scene3;
 
   return (
-    <div>
-      <Scene id={scene.c1} clickFn={() => props.update(ns("scene1", "c2"))}>
+    <Scene>
+      <Clip id={scene.c1} clickFn={() => props.update(ns("scene3", "c2"))}>
         <Img src={zork} alt="Zork, yea?" />
-      </Scene>
-      <Scene isVisible>
+      </Clip>
+
+      <Clip id={scene.c2} clickFn={() => props.update(ns("scene3", "c3"))}>
         <Quote>
-          computer programs that display text, accept textual responses, and
-          then display additional text in reaction to what has been typed
+          "...computer programs that display text, accept textual responses, and
+          then display additional text in reaction to what has been typed..."
         </Quote>
 
-        <Quote>react to input meaningfully</Quote>
-      </Scene>
+        <Quote>"...react to input meaningfully..."</Quote>
+      </Clip>
 
-      <Scene id={scene.c2} clickFn={() => props.update(ns("scene1", "c3"))}>
+      <Clip id={scene.c3} clickFn={() => props.update(ns("scene3", "c4"))}>
         <ol>
           <li>
-            <Big>World Representation</Big>
+            <Big>World Model</Big>
           </li>
           <li>
             <Big>Parser</Big>
           </li>
         </ol>
-      </Scene>
+      </Clip>
 
-      <Scene id={scene.c3} clickFn={() => props.update(ns("scene1", "c4"))}>
-        <div style={{ textAlign: "center" }}>
-          <Img src={thinking} mw={400} alt="thinking_intensifies" />
-          <Text>:thinking_intensifies:</Text>
-        </div>
-      </Scene>
+      <Clip
+        id={scene.c4}
+        clickFn={() => props.update(ns("scene3", "c5"))}
+        center
+      >
+        <Img src={thinking} mw={400} alt="thinking_intensifies" />
+        <Text>:thinking_intensifies:</Text>
+      </Clip>
 
-      <Scene nextPage="why-react" hideNav id={scene.c4}>
-        <Big>🚨 extremely good games: 🚨</Big>
+      <Clip id={scene.c5} nextPage="why-react" hideNav>
+        <Text med bold>
+          🚨 Very good games: 🚨
+        </Text>
         <ul>
-          <li>
-            <a href="http://www.seerscatalogue.com/">
-              The Seers' Catalogue (Web)
-            </a>
-          </li>
-          <li>
-            <a href="http://kentuckyroutezero.com/">
-              Kentucky Route Zero (multiple platforms)
-            </a>
-          </li>
-          <li>
-            <a href="http://morgane.com/fantom">Fantom (Web)</a>
-          </li>
-          <li>
-            <a href="https://itunes.apple.com/us/app/blackbar/id672002602?mt=8">
-              Blackbar (iOS)
-            </a>
-          </li>
-          <li>
-            <a href="https://www.sbnation.com/a/17776-football">17776 (Web)</a>
-          </li>
+          <ListItem>
+            <Text mbNone>
+              <a href="http://www.seerscatalogue.com/">
+                The Seers' Catalogue (Web)
+              </a>
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text mbNone>
+              <a href="http://kentuckyroutezero.com/">
+                Kentucky Route Zero (multiple platforms)
+              </a>
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text mbNone>
+              <a href="http://morgane.com/fantom">Fantom (Web)</a>
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text mbNone>
+              <a href="https://itunes.apple.com/us/app/blackbar/id672002602?mt=8">
+                Blackbar (iOS)
+              </a>
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text mbNone>
+              <a href="https://www.sbnation.com/a/17776-football">
+                17776 (Web)
+              </a>
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text mbNone>
+              <a href="https://en.wikipedia.org/wiki/The_Adventures_of_Willy_Beamish">
+                Willy Beamish (MS-DOS)
+              </a>
+            </Text>
+          </ListItem>
         </ul>
-      </Scene>
-    </div>
+      </Clip>
+    </Scene>
   );
 };
 
