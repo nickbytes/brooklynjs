@@ -1,21 +1,35 @@
 import React from "react";
+import { connect } from "refunk";
+
 import Scene from "../components/Scene";
 import Big from "../components/Big";
 import Text from "../components/Text";
 import Img from "../components/Img";
 import lol from "../images/lol.gif";
 
-const BuildYourOwn = () => (
+const BuildYourOwn = props => (
   <div>
     <Scene isVisible>
-      <Big>
-        Want to see an example of a framework for building text adventure games
-        in React?
-      </Big>
+      <Big>An example?</Big>
     </Scene>
 
     <Scene isVisible>
       <Img src={lol} alt={`You're looking at one!`} />
+    </Scene>
+
+    <Scene isVisible>
+      <Big> Some code, plz?</Big>
+    </Scene>
+
+    <Scene isVisible>
+      <ol>
+        <li>World Representation</li>
+        <li>Parsers</li>
+      </ol>
+    </Scene>
+
+    <Scene isVisible>
+      <Text>World Representation: OMG plain objects</Text>
     </Scene>
 
     <Scene isVisible nextPage={"thanks"} hideNav>
@@ -30,4 +44,4 @@ const BuildYourOwn = () => (
   </div>
 );
 
-export default BuildYourOwn;
+export default connect(BuildYourOwn);

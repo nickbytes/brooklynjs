@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   margin: 40px auto;
@@ -7,6 +7,12 @@ export const Container = styled.div`
 
 export const ChildContainer = styled.div`
   margin-bottom: 40px;
+  ${props =>
+    props.center
+      ? css`
+          text-align: center;
+        `
+      : null};
 `;
 
 export const NextContainer = styled.div`

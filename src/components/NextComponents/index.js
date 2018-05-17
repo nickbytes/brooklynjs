@@ -7,10 +7,11 @@ const Button = styled.button`
   border: none;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
 `;
 
-export const NextButton = () => (
-  <Button onClick={() => console.log("figure that out later")}>☞</Button>
+export const NextButton = ({ clickFn }) => (
+  <Button onClick={() => clickFn()}>☞</Button>
 );
 
 const StyledLink = styled(Link)`

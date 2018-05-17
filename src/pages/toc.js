@@ -21,16 +21,6 @@ const Toc = () => (
         </li>
         <li>
           <Text>
-            <Link to="/sandwich-alignment">Sandwich Alignment</Link>
-          </Text>
-        </li>
-        <li>
-          <Text>
-            <Link to="/examples">Examples</Link>
-          </Text>
-        </li>
-        <li>
-          <Text>
             <Link to="/why-react">Why React?</Link>
           </Text>
         </li>
@@ -41,7 +31,7 @@ const Toc = () => (
         </li>
         <li>
           <Text>
-            <Link to="/slashington">Slashington</Link>
+            <Link to="/slashington">Slashington (my game)</Link>
           </Text>
         </li>
         <li>

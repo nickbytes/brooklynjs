@@ -3,14 +3,14 @@ import React from "react";
 import { ChildContainer, Container, NextContainer } from "./styles";
 import { NextButton, NextLink } from "../NextComponents";
 
-const Scene = ({ isVisible, children, xl, hideNav, nextPage }) => (
+const Scene = ({ children, xl, hideNav, nextPage, center, id, clickFn }) => (
   <div>
-    {isVisible && (
+    {id && (
       <Container xl={xl}>
-        <ChildContainer>{children}</ChildContainer>
+        <ChildContainer center={center}>{children}</ChildContainer>
         {!hideNav && (
           <NextContainer>
-            <NextButton />
+            <NextButton clickFn={() => clickFn()} />
           </NextContainer>
         )}
 
