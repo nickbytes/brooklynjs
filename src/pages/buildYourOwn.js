@@ -9,6 +9,11 @@ import Img from "../components/Img";
 import lol from "../images/lol.gif";
 import Clip from "../components/Clip";
 
+import state_pic from "../images/state.png";
+import burning_updater from "../images/burning_updater.png";
+import player_name from "../images/player_name.png";
+import github from "../images/github.png";
+
 const BuildYourOwn = props => {
   const scene = props.scene7;
   return (
@@ -27,22 +32,31 @@ const BuildYourOwn = props => {
 
       <Clip id={scene.c4} clickFn={() => props.update(ns("scene7", "c5"))}>
         <ol>
-          <li>World Model</li>
-          <li>Parsers</li>
+          <li>
+            <Big>World Model</Big>
+          </li>
+          <li>
+            <Big>Parsers</Big>
+          </li>
         </ol>
       </Clip>
 
       <Clip id={scene.c5} clickFn={() => props.update(ns("scene7", "c6"))}>
         <Text>World Model: OMG plain objects</Text>
+        <Img src={state_pic} alt="plain objects" />
       </Clip>
 
-      <Clip id={scene.c6} nextPage={"thanks"} hideNav>
+      <Clip id={scene.c6} clickFn={() => props.update(ns("scene7", "c7"))}>
+        <Text>How do we update this world?</Text>
+        <Img src={player_name} alt="add player name" />
+      </Clip>
+
+      <Clip id={scene.c7} nextPage={"thanks"} hideNav center>
+        <Img src={github} alt="Github" />
         <Text>
-          <Big>
-            <a href="https://github.com/nickbytes/brooklynjs">
-              https://github.com/nickbytes/brooklynjs
-            </a>
-          </Big>
+          <a href="https://github.com/nickbytes/brooklynjs">
+            https://github.com/nickbytes/brooklynjs
+          </a>
         </Text>
       </Clip>
     </Scene>
